@@ -47,7 +47,7 @@ console.log(addZero);
 
 function hasUniqueChars(word) {
     let uniqueChars = new Set([])
-    for (let i = 0; i < word.length; i++) {
+    for (let i = 0; i < word.length; i++) { //O(n)
       uniqueChars.add(word[i])  //O(n)
     }
     return uniqueChars.size === word.length
@@ -82,7 +82,7 @@ function isPangram(string){
     return true;
 }
 //Runtime: O(n^2)
-//SpaceComplexity: O(1)
+//SpaceComplexity: O(n)
 
 
 
@@ -95,6 +95,16 @@ function isPangram(string){
 // // -> 5
 
 
-function find_longest_word(listOfWords){
+function findLongestWord(str) {
+    var strSplit = str.split(' ');
+    var longestWord = 0;
+    for(var i = 0; i < strSplit.length; i++){
+      if(strSplit[i].length > longestWord){
+      longestWord = strSplit[i].length;
+       }
+    }
+    return longestWord;
+  }
 
-}
+  //Runtime:O(n^2)
+  //SpaceComplexity:O(n)
